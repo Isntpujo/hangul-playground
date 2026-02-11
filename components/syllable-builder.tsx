@@ -1,85 +1,9 @@
 import { useState } from "react";
 import { Ban, Copy, X } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
+import syllableData from "../data/syllable-data.json";
 
-const initialConsonants = [
-  { hangul: "(none)", roman: "", value: 0 },
-  { hangul: "ㄱ", roman: "g/k", value: 0x1100 },
-  { hangul: "ㄲ", roman: "kk", value: 0x1101 },
-  { hangul: "ㄴ", roman: "n", value: 0x1102 },
-  { hangul: "ㄷ", roman: "d/t", value: 0x1103 },
-  { hangul: "ㄸ", roman: "tt", value: 0x1104 },
-  { hangul: "ㄹ", roman: "r/l", value: 0x1105 },
-  { hangul: "ㅁ", roman: "m", value: 0x1106 },
-  { hangul: "ㅂ", roman: "b/p", value: 0x1107 },
-  { hangul: "ㅃ", roman: "pp", value: 0x1108 },
-  { hangul: "ㅅ", roman: "s", value: 0x1109 },
-  { hangul: "ㅆ", roman: "ss", value: 0x110a },
-  { hangul: "ㅇ", roman: "-", value: 0x110b },
-  { hangul: "ㅈ", roman: "j", value: 0x110c },
-  { hangul: "ㅉ", roman: "jj", value: 0x110d },
-  { hangul: "ㅊ", roman: "ch", value: 0x110e },
-  { hangul: "ㅋ", roman: "k", value: 0x110f },
-  { hangul: "ㅌ", roman: "t", value: 0x1110 },
-  { hangul: "ㅍ", roman: "p", value: 0x1111 },
-  { hangul: "ㅎ", roman: "h", value: 0x1112 },
-];
-
-const vowels = [
-  { hangul: "(none)", roman: "", value: 0 },
-  { hangul: "ㅏ", roman: "a", value: 0x1161 },
-  { hangul: "ㅐ", roman: "ae", value: 0x1162 },
-  { hangul: "ㅑ", roman: "ya", value: 0x1163 },
-  { hangul: "ㅒ", roman: "yae", value: 0x1164 },
-  { hangul: "ㅓ", roman: "eo", value: 0x1165 },
-  { hangul: "ㅔ", roman: "e", value: 0x1166 },
-  { hangul: "ㅕ", roman: "yeo", value: 0x1167 },
-  { hangul: "ㅖ", roman: "ye", value: 0x1168 },
-  { hangul: "ㅗ", roman: "o", value: 0x1169 },
-  { hangul: "ㅘ", roman: "wa", value: 0x116a },
-  { hangul: "ㅙ", roman: "wae", value: 0x116b },
-  { hangul: "ㅚ", roman: "oe", value: 0x116c },
-  { hangul: "ㅛ", roman: "yo", value: 0x116d },
-  { hangul: "ㅜ", roman: "u", value: 0x116e },
-  { hangul: "ㅝ", roman: "wo", value: 0x116f },
-  { hangul: "ㅞ", roman: "we", value: 0x1170 },
-  { hangul: "ㅟ", roman: "wi", value: 0x1171 },
-  { hangul: "ㅠ", roman: "yu", value: 0x1172 },
-  { hangul: "ㅡ", roman: "eu", value: 0x1173 },
-  { hangul: "ㅢ", roman: "ui", value: 0x1174 },
-  { hangul: "ㅣ", roman: "i", value: 0x1175 },
-];
-
-const finalConsonants = [
-  { hangul: "(none)", roman: "", value: 0 },
-  { hangul: "ㄱ", roman: "k", value: 0x11a8 },
-  { hangul: "ㄲ", roman: "kk", value: 0x11a9 },
-  { hangul: "ㄳ", roman: "ks", value: 0x11aa },
-  { hangul: "ㄴ", roman: "n", value: 0x11ab },
-  { hangul: "ㄵ", roman: "nj", value: 0x11ac },
-  { hangul: "ㄶ", roman: "nh", value: 0x11ad },
-  { hangul: "ㄷ", roman: "t", value: 0x11ae },
-  { hangul: "ㄹ", roman: "l", value: 0x11af },
-  { hangul: "ㄺ", roman: "lg", value: 0x11b0 },
-  { hangul: "ㄻ", roman: "lm", value: 0x11b1 },
-  { hangul: "ㄼ", roman: "lb", value: 0x11b2 },
-  { hangul: "ㄽ", roman: "ls", value: 0x11b3 },
-  { hangul: "ㄾ", roman: "lt", value: 0x11b4 },
-  { hangul: "ㄿ", roman: "lp", value: 0x11b5 },
-  { hangul: "ㅀ", roman: "lh", value: 0x11b6 },
-  { hangul: "ㅁ", roman: "m", value: 0x11b7 },
-  { hangul: "ㅂ", roman: "p", value: 0x11b8 },
-  { hangul: "ㅄ", roman: "ps", value: 0x11b9 },
-  { hangul: "ㅅ", roman: "s", value: 0x11ba },
-  { hangul: "ㅆ", roman: "ss", value: 0x11bb },
-  { hangul: "ㅇ", roman: "ng", value: 0x11bc },
-  { hangul: "ㅈ", roman: "j", value: 0x11bd },
-  { hangul: "ㅊ", roman: "ch", value: 0x11be },
-  { hangul: "ㅋ", roman: "k", value: 0x11bf },
-  { hangul: "ㅌ", roman: "t", value: 0x11c0 },
-  { hangul: "ㅍ", roman: "p", value: 0x11c1 },
-  { hangul: "ㅎ", roman: "h", value: 0x11c2 },
-];
+const { initialConsonants, vowels, finalConsonants } = syllableData;
 
 function assembleSyllable(
   initial: number,
@@ -180,10 +104,10 @@ export function SyllableBuilder() {
   };
 
   return (
-    <div className="flex flex-col gap-8 md:gap-12 w-full h-fit pt-4 pb-50 px-4 md:pt-12 md:px-12 bg-white">
+    <div className="relative flex flex-col gap-8 md:gap-12 w-full h-fit pt-4 pb-50 px-4 md:pt-12 md:px-12 bg-white">
       <Toaster position="top-center" reverseOrder={true} />
       <div className="grid md:grid-cols-[auto_1fr] items-center gap-4 md:gap-8">
-        <div className="flex min-h-50 gap-8 items-center justify-center p-8 bg-gray-100 rounded-2xl">
+        <div className="flex min-h-50 gap-8 items-center justify-center p-8 bg-gray-100 rounded-2xl z-10">
           <div className="inline-block text-gray-800">
             <div className="text-7xl font-bold text-center">
               {currentSyllable}

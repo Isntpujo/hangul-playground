@@ -1,0 +1,284 @@
+{
+  "characters": [
+    {
+      "category": "Consonant",
+      "subcategory": "Basic",
+      "hangul": "ㄱ",
+      "roman": "g / k",
+      "notes": ""
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Basic",
+      "hangul": "ㄴ",
+      "roman": "n",
+      "notes": ""
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Basic",
+      "hangul": "ㄷ",
+      "roman": "d / t",
+      "notes": ""
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Basic",
+      "hangul": "ㄹ",
+      "roman": "r / l",
+      "notes": ""
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Basic",
+      "hangul": "ㅁ",
+      "roman": "m",
+      "notes": ""
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Basic",
+      "hangul": "ㅂ",
+      "roman": "b / p",
+      "notes": ""
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Basic",
+      "hangul": "ㅅ",
+      "roman": "s",
+      "notes": ""
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Basic",
+      "hangul": "ㅇ",
+      "roman": "ng / -",
+      "notes": "silent at start"
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Basic",
+      "hangul": "ㅈ",
+      "roman": "j",
+      "notes": ""
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Basic",
+      "hangul": "ㅊ",
+      "roman": "ch",
+      "notes": ""
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Basic",
+      "hangul": "ㅋ",
+      "roman": "k",
+      "notes": ""
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Basic",
+      "hangul": "ㅌ",
+      "roman": "t",
+      "notes": ""
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Basic",
+      "hangul": "ㅍ",
+      "roman": "p",
+      "notes": ""
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Basic",
+      "hangul": "ㅎ",
+      "roman": "h",
+      "notes": ""
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Double",
+      "hangul": "ㄲ",
+      "roman": "kk",
+      "notes": "tense"
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Double",
+      "hangul": "ㄸ",
+      "roman": "tt",
+      "notes": "tense"
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Double",
+      "hangul": "ㅃ",
+      "roman": "pp",
+      "notes": "tense"
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Double",
+      "hangul": "ㅆ",
+      "roman": "ss",
+      "notes": "tense"
+    },
+    {
+      "category": "Consonant",
+      "subcategory": "Double",
+      "hangul": "ㅉ",
+      "roman": "jj",
+      "notes": "tense"
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Basic",
+      "hangul": "ㅏ",
+      "roman": "a",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Basic",
+      "hangul": "ㅑ",
+      "roman": "ya",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Basic",
+      "hangul": "ㅓ",
+      "roman": "eo",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Basic",
+      "hangul": "ㅕ",
+      "roman": "yeo",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Basic",
+      "hangul": "ㅗ",
+      "roman": "o",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Basic",
+      "hangul": "ㅛ",
+      "roman": "yo",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Basic",
+      "hangul": "ㅜ",
+      "roman": "u",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Basic",
+      "hangul": "ㅠ",
+      "roman": "yu",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Basic",
+      "hangul": "ㅡ",
+      "roman": "eu",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Basic",
+      "hangul": "ㅣ",
+      "roman": "i",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Compound",
+      "hangul": "ㅐ",
+      "roman": "ae",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Compound",
+      "hangul": "ㅒ",
+      "roman": "yae",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Compound",
+      "hangul": "ㅔ",
+      "roman": "e",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Compound",
+      "hangul": "ㅖ",
+      "roman": "ye",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Compound",
+      "hangul": "ㅘ",
+      "roman": "wa",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Compound",
+      "hangul": "ㅙ",
+      "roman": "wae",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Compound",
+      "hangul": "ㅚ",
+      "roman": "oe",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Compound",
+      "hangul": "ㅝ",
+      "roman": "wo",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Compound",
+      "hangul": "ㅞ",
+      "roman": "we",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Compound",
+      "hangul": "ㅟ",
+      "roman": "wi",
+      "notes": ""
+    },
+    {
+      "category": "Vowel",
+      "subcategory": "Compound",
+      "hangul": "ㅢ",
+      "roman": "ui",
+      "notes": ""
+    }
+  ]
+}
