@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Copy, X } from "lucide-react";
+import { Ban, Copy, X } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
 
 const initialConsonants = [
@@ -260,7 +260,13 @@ export function SyllableBuilder() {
                     : "bg-gray-100 hover:bg-gray-200"
                 }`}
               >
-                <div className="text-2xl">{consonant.hangul}</div>
+                <div className="text-2xl">
+                  {consonant.hangul === "(none)" ? (
+                    <Ban className="w-6 h-6 mx-auto" />
+                  ) : (
+                    consonant.hangul
+                  )}
+                </div>
                 <div className="text-xs mt-1">{consonant.roman}</div>
               </button>
             ))}
@@ -282,7 +288,13 @@ export function SyllableBuilder() {
                     : "bg-gray-100 hover:bg-gray-200"
                 }`}
               >
-                <div className="text-2xl">{vowel.hangul}</div>
+                <div className="text-2xl">
+                  {vowel.hangul === "(none)" ? (
+                    <Ban className="w-6 h-6 mx-auto" />
+                  ) : (
+                    vowel.hangul
+                  )}
+                </div>
                 <div className="text-xs mt-1">{vowel.roman}</div>
               </button>
             ))}
@@ -305,7 +317,13 @@ export function SyllableBuilder() {
                     : "bg-gray-100 hover:bg-gray-200"
                 }`}
               >
-                <div className="text-2xl">{consonant.hangul}</div>
+                <div className="text-2xl">
+                  {consonant.hangul === "(none)" ? (
+                    <Ban className="w-6 h-6 mx-auto" />
+                  ) : (
+                    consonant.hangul
+                  )}
+                </div>
                 <div className="text-xs mt-1">{consonant.roman}</div>
               </button>
             ))}

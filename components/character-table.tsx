@@ -286,7 +286,7 @@ export function CharacterTable() {
   const vowels = characters.filter((c) => c.category === "Vowel");
 
   return (
-    <div className="flex gap-12 flex-col md:flex-row w-full h-fit pt-8 pb-20 px-8 md:pt-12 md:pb-40 md:px-12 bg-white text-gray-800">
+    <div className="flex gap-12 flex-col md:flex-row w-full h-fit pt-8 pb-50 px-8 md:pt-12 md:px-12 bg-white text-gray-800">
       <div className="w-full">
         <h2 className="text-3xl mb-6 text-center bg-blue-100 py-3 rounded-lg">
           Consonants (자음)
