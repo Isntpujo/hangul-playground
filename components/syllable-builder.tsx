@@ -180,7 +180,7 @@ export function SyllableBuilder() {
   };
 
   return (
-    <div className="flex flex-col gap-8 md:gap-12 w-full h-fit pt-4 pb-50 px-4 md:pt-12  md:px-12 bg-white">
+    <div className="flex flex-col gap-8 md:gap-12 w-full h-fit pt-4 pb-50 px-4 md:pt-12 md:px-12 bg-white">
       <Toaster position="top-center" reverseOrder={true} />
       <div className="grid md:grid-cols-[auto_1fr] items-center gap-4 md:gap-8">
         <div className="flex min-h-50 gap-8 items-center justify-center p-8 bg-gray-100 rounded-2xl">
