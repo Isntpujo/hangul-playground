@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased scrollbar scrollbar-w-1.5 scrollbar-track-blue-100 scrollbar-thumb-blue-400 bg-white dark:bg-black`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased scrollbar scrollbar-w-1.5 scrollbar-track-blue-100 dark:scrollbar-track-gray-500 scrollbar-thumb-blue-400 bg-white dark:bg-black`}
       >
         <ThemeProvider
           attribute="class"

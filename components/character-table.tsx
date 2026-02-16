@@ -40,13 +40,13 @@ export function CharacterTable() {
                       key={index}
                       className="text-neutral-900 dark:text-neutral-100"
                     >
-                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-3xl">
+                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-3xl hover:bg-neutral-100 dark:hover:bg-neutral-600">
                         {char.hangul}
                       </td>
-                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-lg">
+                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-lg hover:bg-neutral-100 dark:hover:bg-neutral-600">
                         {char.roman}
                       </td>
-                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3">
+                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-600">
                         {char.notes}
                       </td>
                     </tr>
@@ -83,13 +83,13 @@ export function CharacterTable() {
                       key={index}
                       className="text-neutral-900 dark:text-neutral-100"
                     >
-                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-3xl">
+                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-3xl hover:bg-neutral-100 dark:hover:bg-neutral-600">
                         {char.hangul}
                       </td>
-                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-lg">
+                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-lg hover:bg-neutral-100 dark:hover:bg-neutral-600">
                         {char.roman}
                       </td>
-                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 ">
+                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 hover:bg-neutral-100 dark:hover:bg-neutral-600">
                         {char.notes}
                       </td>
                     </tr>
@@ -129,13 +129,13 @@ export function CharacterTable() {
                   .filter((v) => v.subcategory === "Basic")
                   .map((char, index) => (
                     <tr key={index} className="dark:text-neutral-100">
-                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-3xl">
+                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-3xl hover:bg-neutral-100 dark:hover:bg-neutral-600">
                         {char.hangul}
                       </td>
-                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-lg">
+                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-lg hover:bg-neutral-100 dark:hover:bg-neutral-600">
                         {char.roman}
                       </td>
-                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-gray-600">
+                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-gray-600 hover:bg-neutral-100 dark:hover:bg-neutral-600">
                         {char.notes}
                       </td>
                     </tr>
@@ -172,13 +172,13 @@ export function CharacterTable() {
                       key={index}
                       className="text-neutral-900 dark:text-neutral-100"
                     >
-                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-3xl">
+                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-3xl hover:bg-neutral-100 dark:hover:bg-neutral-600">
                         {char.hangul}
                       </td>
-                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-lg">
+                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-lg hover:bg-neutral-100 dark:hover:bg-neutral-600">
                         {char.roman}
                       </td>
-                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-gray-600">
+                      <td className="border border-gray-300 bg-neutral-50 dark:bg-neutral-700 px-4 py-3 text-gray-600 hover:bg-neutral-100 dark:hover:bg-neutral-600">
                         {char.notes}
                       </td>
                     </tr>
