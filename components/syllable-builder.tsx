@@ -104,29 +104,31 @@ export function SyllableBuilder() {
   };
 
   return (
-    <div className="relative flex flex-col gap-8 md:gap-12 w-full h-fit pt-4 pb-50 px-4 md:pt-12 md:px-12 bg-white">
+    <div className="relative flex flex-col gap-8 md:gap-12 w-full h-fit pt-4 pb-50 px-4 md:pt-12 md:px-12 bg-white dark:bg-neutral-800">
       <Toaster position="top-center" reverseOrder={true} />
       <div className="grid md:grid-cols-[auto_1fr] items-center gap-4 md:gap-8">
-        <div className="flex min-h-50 gap-8 items-center justify-center p-8 bg-gray-100 rounded-2xl z-10">
+        <div className="flex min-h-50 gap-8 items-center justify-center p-8 bg-gray-100 dark:bg-neutral-700 rounded-2xl z-10">
           <div className="inline-block text-gray-800">
-            <div className="text-7xl font-bold text-center">
+            <div className="text-7xl font-bold text-center text-neutral-900 dark:text-neutral-100">
               {currentSyllable}
             </div>
-            <div className="text-sm text-gray-600 text-center mt-2">
+            <div className="text-sm text-center mt-2 text-neutral-900 dark:text-neutral-100">
               {getCurrentRomanization()}
             </div>
           </div>
           <button
             onClick={addToHistory}
-            className="px-4 py-2 bg-blue-600 text-sm text-white rounded-lg hover:bg-blue-700 transition-colors cursor-pointer text-nowrap"
+            className="px-4 py-2 bg-blue-500 text-sm text-white rounded-lg hover:bg-blue-600 transition-colors cursor-pointer text-nowrap"
           >
             Add Text
           </button>
         </div>
 
-        <div className="p-6 min-h-50 bg-gray-100 text-gray-800 rounded-2xl">
+        <div className="p-6 min-h-50 bg-gray-100 dark:bg-neutral-700 text-gray-800 rounded-2xl">
           <div className="flex justify-between items-center mb-4">
-            <h3 className="text-xl">Hangul Text</h3>
+            <h3 className="text-xl text-neutral-900 dark:text-neutral-100">
+              Hangul Text
+            </h3>
             <div className="flex gap-2">
               <button
                 onClick={copyToClipboard}
@@ -148,10 +150,12 @@ export function SyllableBuilder() {
               {syllableHistory.map((entry, index) => (
                 <div
                   key={index}
-                  className="relative text-4xl text-center bg-white px-6 py-3 rounded-lg shadow-md group"
+                  className="relative text-4xl text-center bg-white dark:bg-neutral-500 px-6 py-3 rounded-lg shadow-md group"
                 >
-                  <div>{entry.syllable}</div>
-                  <div className="text-sm text-gray-600 mt-1">
+                  <div className="text-neutral-900 dark:text-neutral-100">
+                    {entry.syllable}
+                  </div>
+                  <div className="text-sm mt-1 text-neutral-900 dark:text-neutral-100">
                     {entry.roman}
                   </div>
                   <button
@@ -170,7 +174,7 @@ export function SyllableBuilder() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-800">
         <div>
-          <h3 className="text-xl mb-4 text-center bg-blue-100 py-2 rounded-lg">
+          <h3 className="text-xl mb-4 text-center bg-blue-100 dark:bg-blue-300 py-2 rounded-lg">
             Initial Consonant (초성)
           </h3>
           <div className="grid grid-cols-4 gap-2">
@@ -181,7 +185,7 @@ export function SyllableBuilder() {
                 className={`text-center p-4 rounded-lg transition-all cursor-pointer ${
                   selectedInitial === consonant.value
                     ? "bg-blue-600 text-white shadow-lg scale-110"
-                    : "bg-gray-100 hover:bg-gray-200"
+                    : "bg-gray-100 hover:bg-neutral-200 dark:bg-neutral-700 dark:hover:bg-neutral-600 text-neutral-900 dark:text-neutral-100"
                 }`}
               >
                 <div className="text-2xl">
@@ -198,7 +202,7 @@ export function SyllableBuilder() {
         </div>
 
         <div>
-          <h3 className="text-xl mb-4 text-center bg-purple-100 py-2 rounded-lg">
+          <h3 className="text-xl mb-4 text-center bg-purple-100  dark:bg-purple-300 py-2 rounded-lg">
             Vowel (중성)
           </h3>
           <div className="grid grid-cols-4 gap-2">
@@ -209,7 +213,7 @@ export function SyllableBuilder() {
                 className={`p-4 rounded-lg transition-all cursor-pointer ${
                   selectedVowel === vowel.value
                     ? "bg-purple-600 text-white shadow-lg scale-110"
-                    : "bg-gray-100 hover:bg-gray-200"
+                    : "bg-gray-100 hover:bg-neutral-200 dark:bg-neutral-700 dark:hover:bg-neutral-600 text-neutral-900 dark:text-neutral-100"
                 }`}
               >
                 <div className="text-2xl">
@@ -226,7 +230,7 @@ export function SyllableBuilder() {
         </div>
 
         <div className="md:col-span-2 lg:col-span-1">
-          <h3 className="text-xl mb-4 text-center bg-pink-100 py-2 rounded-lg">
+          <h3 className="text-xl mb-4 text-center bg-pink-100 dark:bg-pink-300 py-2 rounded-lg">
             Final Consonant (종성)
           </h3>
 
@@ -238,7 +242,7 @@ export function SyllableBuilder() {
                 className={`p-4 rounded-lg transition-all cursor-pointer ${
                   selectedFinal === consonant.value
                     ? "bg-pink-600 text-white shadow-lg scale-110"
-                    : "bg-gray-100 hover:bg-gray-200"
+                    : "bg-gray-100 hover:bg-neutral-200 dark:bg-neutral-700 dark:hover:bg-neutral-600 text-neutral-900 dark:text-neutral-100"
                 }`}
               >
                 <div className="text-2xl">
@@ -252,7 +256,7 @@ export function SyllableBuilder() {
               </button>
             ))}
           </div>
-        </div>
+        </div>  
       </div>
     </div>
   );
